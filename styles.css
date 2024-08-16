@@ -1,0 +1,194 @@
+/* Définition des variables CSS */
+:root {
+    --main-font: 'PTSerif-Regular', serif;
+    --background-color: #f2e2d5;
+    --text-color-primary: #333;
+    --text-color-secondary: #666;
+
+    --Image-Background: #333;
+    --Image-Border: #333
+}
+
+/* Style global */
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;/* Empêche le défilement horizontal */
+}
+
+/* Barre de navigation */
+nav {
+    position: fixed;
+    /* La navigation reste fixe en haut de la page */
+    top: 0;
+    /* Position en haut */
+    left: 0;
+    /* Position à gauche */
+    width: 100%;
+    /* Largeur fixe de 100% */
+    height: 60px;
+    /* Hauteur fixe */
+    background-color: var(--background-color);
+    padding: 10px;
+    z-index: 1000;
+    /* S'assurer que la barre de navigation reste au-dessus du contenu */ 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* Alignement vertical au centre */
+    height: 100%;
+    /* S'assurer que les éléments sont centrés verticalement */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-weight: bold;
+    font-size: 2rem;
+    transition: color 0.2s ease; /* Transition progressive */
+}
+
+nav ul li a:hover {
+    color: var(--text-color-secondary);
+    /* Change la couleur du texte au survol */
+}
+
+.container_infos {
+    max-width: 1200px;
+    width: auto;
+    /* Ajuste la largeur en fonction du contenu */
+    padding: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: auto;
+    /* Ajuste la hauteur en fonction du contenu */
+    margin: 250px auto 0 auto;
+    /* Augmente la marge supérieure pour descendre le conteneur */
+    background-color: var(--background-color);
+    /* Couleur de fond */
+    box-sizing: border-box;
+    /* Inclure padding et border dans la largeur et la hauteur */
+}
+
+.text {
+    flex: 1;
+    margin-left: 2%;
+    max-width: 60%;
+}
+
+.text p {
+    color: var(--text-color-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.image {
+    flex-shrink: 0;
+    width: 35%;
+    margin-left: 2%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--text-color-primary);
+}
+.container_space{
+        max-width: 1200px;
+        width: auto;
+            /* Ajuste la largeur en fonction du contenu */
+        padding: 6em;
+        margin: auto auto;
+            /* Marge en haut et en bas pour séparer du conteneur précédent */
+        background-color: var(--background-color);
+            /* Couleur de fond */
+        border: 1px solid var(--background-color);
+            /* Bordure légère */
+        box-sizing: border-box;
+            /* Inclure padding et border dans la largeur et la hauteur */
+}
+
+/* Section des projets */
+
+.container_projects {
+    max-width: 1200px;
+    width: auto;
+    /* Ajuste la largeur en fonction du contenu */
+    padding: 2em;
+    margin: auto auto;
+    /* Marge en haut et en bas pour séparer du conteneur précédent */
+    background-color: var(--background-color);
+    /* Couleur de fond */
+    border: 1px solid none;
+    /* Bordure légère */
+    box-sizing: border-box;
+    /* Inclure padding et border dans la largeur et la hauteur */
+}
+
+
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 80px;
+    max-width: 1200px;
+    width: auto;
+    margin: 40px auto;
+}
+
+.project {
+    flex: 1 1 calc(25% - 20px);
+    background-color: var(--background-color);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    /* Ajoute des coins arrondis si souhaité */
+    margin-bottom: 10px;
+    /* Espace entre l'image et le bouton */
+}
+
+.project-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    /* Couleur de fond du bouton */
+    color: var(--background-color);
+    /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 5px;
+    /* Coins arrondis */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: #555;
+    /* Change la couleur au survol */
+}
+

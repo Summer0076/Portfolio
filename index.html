@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portefolio</title>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1, minimum-scale=1">
+    <title>Mon Portfolio</title>
+    <!-- Lien vers le fichier CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien vers la police PT Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" href="" type="image/png">
 </head>
+
 <body>
-    <h1>Bienvenu sur mon portefolio</h1>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li id="NavProject"><a href="#">Projets</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container_infos">
+        <div class="text">
+            <h1>Bienvenue sur mon portfolio</h1>
+            <p>Je suis un jeune développeur. Je connais un peu HTML, CSS, et Python, mais j'ai surtout développé des jeux sur le moteur
+            Godot en GDScript.</p>
+        </div>
+        <div class="image">
+            <img src="Images/ImageNoBackgroundCarré.png" alt="Image de présentation">
+        </div>
+
+    </div>
+
+    <div class="container_space"></div>
+
+    <div class="container_projects">
+          <div class="projects-section">
+            <div id="ProjectCible"></div>
+
+
+            <div class="project">
+                <img src="Images/BetterAsteroids/BetterAsteroids_Portefolio.png">
+                <button class="project-btn" id="BetterAsteroids_button">Better Asteroids</button>
+            </div>
+
+            <div class="project">
+                <img src="Images/LoupGarou/LoupGarou.png">
+                <button class="project-btn" id="LoupGarou_button">Loup-Garou</button>
+            </div>
+            <div class="project">
+                <img src="Images/Neutre.png">
+
+            </div>
+            <div class="project">
+                <img src="Images/Neutre.png">
+
+            </div>
+            <div class="project">
+                <img src="Images/Neutre.png">
+            </div>
+            <div class="project">
+                <img src="Images/Neutre.png">
+            </div>
+
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
 </body>
+
 </html>
