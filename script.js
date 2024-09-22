@@ -2,6 +2,9 @@
 const bouton_BetterAsteroids = document.getElementById('BetterAsteroids_button');
 const bouton_LoupGarou = document.getElementById('LoupGarou_button');
 const bouton_FallingFrog = document.getElementById('FallingFrog_button');
+const bouton_RobotsFight = document.getElementById('RobotsFight_button');
+
+
 
 const button_Nav_Project = document.getElementById('NavProject');
 const Project_Cible = document.getElementById('ProjectCible');
@@ -19,6 +22,10 @@ bouton_LoupGarou.addEventListener('click', function () {
 
 bouton_FallingFrog.addEventListener('click', function () {
     window.location.href = 'FallingFrog/FallingFrog.html';
+});
+
+bouton_RobotsFight.addEventListener('click', function () {
+    window.location.href = 'RobotsFight/RobotsFight.html';
 });
 
 // Go to Project on click nav bar project
