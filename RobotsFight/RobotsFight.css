@@ -90,7 +90,8 @@ nav ul li a:hover {
     margin-left: 2%;
     max-width: 60%;
 }
-.text h1{
+
+.text h1 {
     font-size: 4rem;
 }
 
@@ -128,7 +129,7 @@ nav ul li a:hover {
     /* Inclure padding et border dans la largeur et la hauteur */
 }
 
-.container_descriptions{
+.container_descriptions {
     max-width: 1200px;
     width: auto;
     /* Ajuste la largeur en fonction du contenu */
@@ -145,12 +146,12 @@ nav ul li a:hover {
 }
 
 
-.titres_description{
+.titres_description {
     font-size: 2rem;
     text-decoration: underline;
 }
 
-.description_text{
+.description_text {
     color: var(--text-color-secondary);
 }
 
@@ -162,7 +163,7 @@ a {
 }
 
 a:hover {
-    color:var(--text-color-primary);
+    color: var(--text-color-primary);
     /* Change la couleur au survol */
 }
 
@@ -174,7 +175,7 @@ a:hover {
     /* Une colonne pour le conteneur principal */
     gap: 10px;
     /* Espace entre les éléments du conteneur */
-   
+
 }
 
 .Images {
@@ -186,7 +187,7 @@ a:hover {
 }
 
 .Images img {
-    width: 50%;
+    width: 100%;
     /* Ajuste la largeur pour remplir la cellule de la grille */
     height: auto;
     /* Hauteur automatique pour conserver les proportions */
