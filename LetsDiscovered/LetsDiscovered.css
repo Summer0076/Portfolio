@@ -1,0 +1,270 @@
+:root {
+    --main-font: 'PTSerif-Regular', serif;
+    --background-color: #f2e2d5;
+    --text-color-primary: #333;
+    --text-color-secondary: #555555;
+
+    --Image-Background: #333;
+    --Image-Border: #333
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--background-color);
+    color: var(--text-color-primary);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Empêche le défilement horizontal */
+}
+
+
+/* Barre de navigation */
+nav {
+    position: fixed;
+    /* La navigation reste fixe en haut de la page */
+    top: 0;
+    /* Position en haut */
+    left: 0;
+    /* Position à gauche */
+    width: 100%;
+    /* Largeur fixe de 100% */
+    height: 60px;
+    /* Hauteur fixe */
+    background-color: var(--background-color);
+    padding: 10px;
+    z-index: 1000;
+    /* S'assurer que la barre de navigation reste au-dessus du contenu */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* Alignement vertical au centre */
+    height: 100%;
+    /* S'assurer que les éléments sont centrés verticalement */
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-weight: bold;
+    font-size: 2rem;
+    transition: color 0.2s ease;
+    /* Transition progressive */
+}
+
+nav ul li a:hover {
+    color: var(--text-color-secondary);
+    /* Change la couleur du texte au survol */
+}
+
+.container_infos {
+    max-width: 1200px;
+    width: auto;
+    /* Ajuste la largeur en fonction du contenu */
+    padding: 2em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: auto;
+    /* Ajuste la hauteur en fonction du contenu */
+    margin: 250px auto 0 auto;
+    /* Augmente la marge supérieure pour descendre le conteneur */
+    background-color: var(--background-color);
+    /* Couleur de fond */
+    box-sizing: border-box;
+    /* Inclure padding et border dans la largeur et la hauteur */
+}
+
+.text {
+    flex: 1;
+    margin-left: 2%;
+    max-width: 60%;
+}
+.text h1{
+    font-size: 4rem;
+}
+
+.text p {
+    color: var(--text-color-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.image {
+    flex-shrink: 0;
+    width: 35%;
+    margin-left: 2%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--text-color-primary);
+}
+
+.container_space {
+    max-width: 1200px;
+    width: auto;
+    /* Ajuste la largeur en fonction du contenu */
+    padding: 6em;
+    margin: auto auto;
+    /* Marge en haut et en bas pour séparer du conteneur précédent */
+    background-color: var(--background-color);
+    /* Couleur de fond */
+    border: 1px solid var(--background-color);
+    /* Bordure légère */
+    box-sizing: border-box;
+    /* Inclure padding et border dans la largeur et la hauteur */
+}
+
+.container_descriptions{
+    max-width: 1200px;
+    width: auto;
+    /* Ajuste la largeur en fonction du contenu */
+    padding: 2em;
+    margin: auto auto;
+    /* Marge en haut et en bas pour séparer du conteneur précédent */
+    background-color: var(--background-color);
+    /* Couleur de fond */
+    border: 1px solid none;
+    /* Bordure légère */
+    box-sizing: border-box;
+    /* Inclure padding et border dans la largeur et la hauteur */
+    font-size: 1.5rem;
+}
+
+
+.titres_description{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.description_text{
+    color: var(--text-color-secondary);
+}
+
+a {
+    color: var(--text-color-secondary);
+    /* Change la couleur du lien */
+    text-decoration: underline;
+    /* Ajoute ou enlève le soulignement */
+}
+
+a:hover {
+    color:var(--text-color-primary);
+    /* Change la couleur au survol */
+}
+
+/* styles.css */
+
+.Illustration-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Une colonne pour le conteneur principal */
+    gap: 10px;
+    /* Espace entre les éléments du conteneur */
+   
+}
+
+.Images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Deux colonnes égales */
+    gap: 10px;
+    /* Espace entre les images */
+}
+
+.Images img {
+    width: 50%;
+    /* Ajuste la largeur pour remplir la cellule de la grille */
+    height: auto;
+    /* Hauteur automatique pour conserver les proportions */
+    object-fit: cover;
+    /* Assure que l'image couvre la cellule sans déformation */
+}
+
+/* Media Queries pour les téléphones */
+@media (max-width: 768px) {
+    nav {
+        height: 50px;
+        /* Réduit la hauteur de la barre de navigation */
+        padding: 5px;
+    }
+
+    nav ul {
+        justify-content: space-around;
+        /* Répartit les éléments uniformément sur la largeur */
+    }
+
+    nav ul li {
+        margin-right: 10px;
+        /* Réduit l'espacement entre les éléments */
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+        /* Réduit la taille du texte */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        height: 50px;
+        /* Garde la hauteur de la barre de navigation */
+        padding: 5px;
+    }
+
+    nav ul {
+        justify-content: space-between;
+        /* Répartit les éléments avec plus d'espace entre eux */
+    }
+
+    nav ul li {
+        margin-right: 20px;
+        /* Réduit davantage l'espacement entre les éléments */
+    }
+
+    nav ul li a {
+        font-size: 1.25rem;
+        /* Réduit encore la taille du texte */
+    }
+}
+
+/* Media Queries pour les téléphones */
+@media (max-width: 768px) {
+    .container_infos {
+        flex-direction: column;
+        /* Empile les éléments verticalement */
+        align-items: center;
+        /* Centre les éléments horizontalement */
+    }
+
+    .image {
+        width: 100%;
+        /* L'image prend toute la largeur */
+        margin-left: 0;
+        /* Enlève la marge à gauche */
+        margin-bottom: 20px;
+        /* Ajoute un espacement sous l'image */
+    }
+
+    .text {
+        max-width: 100%;
+        /* Le texte prend toute la largeur */
+        margin-left: 0;
+        /* Enlève la marge à gauche */
+        text-align: center;
+        /* Centre le texte */
+    }
+}
